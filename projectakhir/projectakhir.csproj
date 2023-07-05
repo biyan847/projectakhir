@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="data_gudang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="data_gudang.Designer.cs">
+      <DependentUpon>data_gudang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="data_mobil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="data_mobil.Designer.cs">
+      <DependentUpon>data_mobil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="data_penyewa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="data_penyewa.Designer.cs">
+      <DependentUpon>data_penyewa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="data_supir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="data_supir.Designer.cs">
+      <DependentUpon>data_supir.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +84,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="data_gudang.resx">
+      <DependentUpon>data_gudang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data_mobil.resx">
+      <DependentUpon>data_mobil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data_penyewa.resx">
+      <DependentUpon>data_penyewa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data_supir.resx">
+      <DependentUpon>data_supir.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
