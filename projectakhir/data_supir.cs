@@ -16,5 +16,23 @@ namespace projectakhir
         {
             InitializeComponent();
         }
+
+        private void dataPenyewaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            data_penyewa dp = new data_penyewa();
+            dp.Show();
+        }
+
+        private void dataMobilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            data_mobil dm = new data_mobil();   
+            dm.Show();
+        }
+
+        private void dataGudangToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            data_gudang dg = new data_gudang();
+            dg.Show();
+        }
     }
 }

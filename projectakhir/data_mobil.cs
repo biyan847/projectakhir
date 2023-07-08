@@ -21,5 +21,23 @@ namespace projectakhir
         {
 
         }
+
+        private void dataGudangToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            data_gudang dg = new data_gudang();
+            dg.Show();
+        }
+
+        private void dataSupriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            data_supir ds = new data_supir();
+            ds.Show();
+        }
+
+        private void dataPenyewaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            data_penyewa dp = new data_penyewa();
+            dp.Show();
+        }
     }
 }

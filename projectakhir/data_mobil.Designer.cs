@@ -177,18 +177,21 @@
             this.dataGudangToolStripMenuItem.Name = "dataGudangToolStripMenuItem";
             this.dataGudangToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dataGudangToolStripMenuItem.Text = "data gudang";
+            this.dataGudangToolStripMenuItem.Click += new System.EventHandler(this.dataGudangToolStripMenuItem_Click);
             // 
             // dataSupriToolStripMenuItem
             // 
             this.dataSupriToolStripMenuItem.Name = "dataSupriToolStripMenuItem";
             this.dataSupriToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dataSupriToolStripMenuItem.Text = "data supir";
+            this.dataSupriToolStripMenuItem.Click += new System.EventHandler(this.dataSupriToolStripMenuItem_Click);
             // 
             // dataPenyewaToolStripMenuItem
             // 
             this.dataPenyewaToolStripMenuItem.Name = "dataPenyewaToolStripMenuItem";
             this.dataPenyewaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dataPenyewaToolStripMenuItem.Text = "data penyewa";
+            this.dataPenyewaToolStripMenuItem.Click += new System.EventHandler(this.dataPenyewaToolStripMenuItem_Click);
             // 
             // data_mobil
             // 

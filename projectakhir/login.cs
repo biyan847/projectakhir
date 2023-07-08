@@ -27,7 +27,16 @@ namespace projectakhir
         {
             if (textBox1.Text == "a21" && textBox2.Text == "1234") 
             {
-
+                data_penyewa dp = new data_penyewa();
+                dp.Show();
+            }
+            if (textBox1.Text == "" && textBox2.Text == "")
+            {
+                MessageBox.Show("Mohon Masukkan Data");
+            }
+            if (textBox1.Text != "a21" && textBox2.Text != "1234")
+            {
+                MessageBox.Show("Masukkan Username dan Password Yang Benar");
             }
         }
     }
