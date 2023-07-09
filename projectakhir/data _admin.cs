@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace projectakhir
 {
-    public partial class datadiri_penyewa : Form
+    public partial class data__admin : Form
     {
-        public datadiri_penyewa()
+        public data__admin()
         {
             InitializeComponent();
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void datadiri_penyewa_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
