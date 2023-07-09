@@ -63,5 +63,10 @@ namespace projectakhir
             dataGridView();
             button1.Enabled = false;
         }
+
+        private void data_penyewa_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

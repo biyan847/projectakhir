@@ -173,6 +173,7 @@
             this.Controls.Add(this.label1);
             this.Name = "data_gudang";
             this.Text = "data_gudang";
+            this.Load += new System.EventHandler(this.data_gudang_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

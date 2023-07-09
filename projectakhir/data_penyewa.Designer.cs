@@ -114,6 +114,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "data_penyewa";
             this.Text = "data_penyewa";
+            this.Load += new System.EventHandler(this.data_penyewa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

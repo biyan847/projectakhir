@@ -32,7 +32,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -50,6 +49,7 @@
             this.dataPenyewaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataMobilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGudangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,13 +73,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 22);
             this.textBox3.TabIndex = 2;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(289, 174);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 3;
             // 
             // textBox5
             // 
@@ -210,29 +203,38 @@
             // dataPenyewaToolStripMenuItem
             // 
             this.dataPenyewaToolStripMenuItem.Name = "dataPenyewaToolStripMenuItem";
-            this.dataPenyewaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataPenyewaToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataPenyewaToolStripMenuItem.Text = "data penyewa";
             this.dataPenyewaToolStripMenuItem.Click += new System.EventHandler(this.dataPenyewaToolStripMenuItem_Click);
             // 
             // dataMobilToolStripMenuItem
             // 
             this.dataMobilToolStripMenuItem.Name = "dataMobilToolStripMenuItem";
-            this.dataMobilToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataMobilToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataMobilToolStripMenuItem.Text = "data mobil";
             this.dataMobilToolStripMenuItem.Click += new System.EventHandler(this.dataMobilToolStripMenuItem_Click);
             // 
             // dataGudangToolStripMenuItem
             // 
             this.dataGudangToolStripMenuItem.Name = "dataGudangToolStripMenuItem";
-            this.dataGudangToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataGudangToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataGudangToolStripMenuItem.Text = "data gudang";
             this.dataGudangToolStripMenuItem.Click += new System.EventHandler(this.dataGudangToolStripMenuItem_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(289, 180);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 17;
             // 
             // data_supir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -246,12 +248,12 @@
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "data_supir";
             this.Text = "data_supir";
+            this.Load += new System.EventHandler(this.data_supir_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -264,7 +266,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
@@ -282,5 +283,6 @@
         private System.Windows.Forms.ToolStripMenuItem dataPenyewaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataMobilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataGudangToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

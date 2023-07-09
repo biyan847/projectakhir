@@ -65,5 +65,10 @@ namespace projectakhir
             MessageBox.Show("Data berhasil disimpan", "Sukses!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             refreshform();
         }
+
+        private void data_gudang_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
