@@ -26,18 +26,21 @@ namespace projectakhir
         {
             data_mobil dm = new data_mobil();
             dm.Show();
+            this.Hide();
         }
 
         private void dataGudangToolStripMenuItem_Click(object sender, EventArgs e)
         {
             data_gudang dg = new data_gudang();
             dg.Show();
+            this.Hide();
         }
 
         private void dataSupirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             data_supir ds = new data_supir();
             ds.Show();
+            this.Hide();
         }
     }
 }

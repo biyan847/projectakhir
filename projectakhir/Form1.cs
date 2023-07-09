@@ -21,6 +21,7 @@ namespace projectakhir
         {
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
+            this.Hide();
         }
     }
 }

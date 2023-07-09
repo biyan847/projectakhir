@@ -34,5 +34,7 @@ namespace projectakhir
             data_penyewa dp = new data_penyewa();
             dp.Show();
         }
+
+        
     }
 }

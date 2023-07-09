@@ -12,6 +12,7 @@ namespace projectakhir
 {
     public partial class data_supir : Form
     {
+        
         public data_supir()
         {
             InitializeComponent();
@@ -21,18 +22,21 @@ namespace projectakhir
         {
             data_penyewa dp = new data_penyewa();
             dp.Show();
+            this.Hide();
         }
 
         private void dataMobilToolStripMenuItem_Click(object sender, EventArgs e)
         {
             data_mobil dm = new data_mobil();   
             dm.Show();
+            this.Hide();
         }
 
         private void dataGudangToolStripMenuItem_Click(object sender, EventArgs e)
         {
             data_gudang dg = new data_gudang();
             dg.Show();
+            this.Hide();
         }
     }
 }

@@ -29,15 +29,13 @@ namespace projectakhir
             {
                 data_penyewa dp = new data_penyewa();
                 dp.Show();
+                this.Hide();
             }
-            if (textBox1.Text == "" && textBox2.Text == "")
+            else
             {
-                MessageBox.Show("Mohon Masukkan Data");
+                MessageBox.Show("Error\n - Pastikan Username dan Password benar \n - Pastikan mengisi kolom Username dan Password");
             }
-            if (textBox1.Text != "a21" && textBox2.Text != "1234")
-            {
-                MessageBox.Show("Masukkan Username dan Password Yang Benar");
-            }
+           
         }
     }
 }
