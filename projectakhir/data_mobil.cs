@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,8 +11,11 @@ using System.Windows.Forms;
 
 namespace projectakhir
 {
+
     public partial class data_mobil : Form
     {
+        private string stringConnection = "data source= FADLISTEV\\FADLI036;database=SewaMobil;User ID=sa;Password=fad036";
+        private SqlConnection koneksi;
         public data_mobil()
         {
             InitializeComponent();
@@ -41,6 +45,28 @@ namespace projectakhir
             data_penyewa dp = new data_penyewa();
             dp.Show();
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string platnomot = tbxplatnomor.Text;
+            string jenis = tbxjenis.Text;
+            string warna = tbxwarna.Text;
+            string idAdmin = tbxidAdmin.Text;
+            string idGudang = tbxidGudang.Text;
+            koneksi.Open();
+
+            string queryString = "INSERT INTO dbo.Mobil (plat_nomor, jenis, warna, id_admin, id_gudang) VALUES (@plat_nomor, @jenis, @warna, @id_admin, @id_gudang)";
+            SqlCommand cmd = new SqlCommand(queryString, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add(new SqlParameter("plat_nomot", platnomot));
+            cmd.Parameters.Add(new SqlParameter("jenis", jenis));
+            cmd.Parameters.Add(new SqlParameter("warna", warna));
+            cmd.Parameters.Add(new SqlParameter("id_admin", idAdmin));
+            cmd.Parameters.Add(new SqlParameter("id_gudang", idGudang));
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
+            MessageBox.Show("Data berhasil disimpan", "Sukses!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

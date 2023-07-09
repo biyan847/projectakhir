@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(data_mobil));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbxplatnomor = new System.Windows.Forms.TextBox();
+            this.tbxjenis = new System.Windows.Forms.TextBox();
+            this.tbxwarna = new System.Windows.Forms.TextBox();
+            this.tbxidAdmin = new System.Windows.Forms.TextBox();
+            this.tbxidGudang = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,40 +49,40 @@
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbxplatnomor
             // 
-            this.textBox1.Location = new System.Drawing.Point(211, 75);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 0;
+            this.tbxplatnomor.Location = new System.Drawing.Point(211, 75);
+            this.tbxplatnomor.Name = "tbxplatnomor";
+            this.tbxplatnomor.Size = new System.Drawing.Size(100, 22);
+            this.tbxplatnomor.TabIndex = 0;
             // 
-            // textBox2
+            // tbxjenis
             // 
-            this.textBox2.Location = new System.Drawing.Point(211, 124);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 1;
+            this.tbxjenis.Location = new System.Drawing.Point(211, 124);
+            this.tbxjenis.Name = "tbxjenis";
+            this.tbxjenis.Size = new System.Drawing.Size(100, 22);
+            this.tbxjenis.TabIndex = 1;
             // 
-            // textBox3
+            // tbxwarna
             // 
-            this.textBox3.Location = new System.Drawing.Point(211, 179);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 2;
+            this.tbxwarna.Location = new System.Drawing.Point(211, 179);
+            this.tbxwarna.Name = "tbxwarna";
+            this.tbxwarna.Size = new System.Drawing.Size(100, 22);
+            this.tbxwarna.TabIndex = 2;
             // 
-            // textBox4
+            // tbxidAdmin
             // 
-            this.textBox4.Location = new System.Drawing.Point(211, 234);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 3;
+            this.tbxidAdmin.Location = new System.Drawing.Point(211, 234);
+            this.tbxidAdmin.Name = "tbxidAdmin";
+            this.tbxidAdmin.Size = new System.Drawing.Size(100, 22);
+            this.tbxidAdmin.TabIndex = 3;
             // 
-            // textBox5
+            // tbxidGudang
             // 
-            this.textBox5.Location = new System.Drawing.Point(211, 298);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 4;
+            this.tbxidGudang.Location = new System.Drawing.Point(211, 298);
+            this.tbxidGudang.Name = "tbxidGudang";
+            this.tbxidGudang.Size = new System.Drawing.Size(100, 22);
+            this.tbxidGudang.TabIndex = 4;
             // 
             // label1
             // 
@@ -137,6 +137,7 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "add";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -175,21 +176,21 @@
             // dataGudangToolStripMenuItem
             // 
             this.dataGudangToolStripMenuItem.Name = "dataGudangToolStripMenuItem";
-            this.dataGudangToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataGudangToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataGudangToolStripMenuItem.Text = "data gudang";
             this.dataGudangToolStripMenuItem.Click += new System.EventHandler(this.dataGudangToolStripMenuItem_Click);
             // 
             // dataSupriToolStripMenuItem
             // 
             this.dataSupriToolStripMenuItem.Name = "dataSupriToolStripMenuItem";
-            this.dataSupriToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataSupriToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataSupriToolStripMenuItem.Text = "data supir";
             this.dataSupriToolStripMenuItem.Click += new System.EventHandler(this.dataSupriToolStripMenuItem_Click);
             // 
             // dataPenyewaToolStripMenuItem
             // 
             this.dataPenyewaToolStripMenuItem.Name = "dataPenyewaToolStripMenuItem";
-            this.dataPenyewaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataPenyewaToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataPenyewaToolStripMenuItem.Text = "data penyewa";
             this.dataPenyewaToolStripMenuItem.Click += new System.EventHandler(this.dataPenyewaToolStripMenuItem_Click);
             // 
@@ -206,11 +207,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxidGudang);
+            this.Controls.Add(this.tbxidAdmin);
+            this.Controls.Add(this.tbxwarna);
+            this.Controls.Add(this.tbxjenis);
+            this.Controls.Add(this.tbxplatnomor);
             this.Name = "data_mobil";
             this.Text = "data_mobil";
             this.toolStrip1.ResumeLayout(false);
@@ -222,11 +223,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tbxplatnomor;
+        private System.Windows.Forms.TextBox tbxjenis;
+        private System.Windows.Forms.TextBox tbxwarna;
+        private System.Windows.Forms.TextBox tbxidAdmin;
+        private System.Windows.Forms.TextBox tbxidGudang;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

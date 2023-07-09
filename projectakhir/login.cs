@@ -31,6 +31,12 @@ namespace projectakhir
                 dp.Show();
                 this.Hide();
             }
+            else if (textBox1.Text == "owner" && textBox2.Text == "owner")
+            {
+                data__admin da = new data__admin();
+                da.Show();
+                this.Hide();
+            }
             else
             {
                 MessageBox.Show("Error\n - Pastikan Username dan Password benar \n - Pastikan mengisi kolom Username dan Password");

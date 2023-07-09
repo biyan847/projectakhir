@@ -23,5 +23,19 @@ namespace projectakhir
             loginForm.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            datadiri_penyewa datapenyewa = new datadiri_penyewa();
+            datapenyewa.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Hide();
+        }
     }
 }

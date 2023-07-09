@@ -57,6 +57,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "open";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // toolStrip1
             // 
@@ -85,21 +86,21 @@
             // dataMobilToolStripMenuItem
             // 
             this.dataMobilToolStripMenuItem.Name = "dataMobilToolStripMenuItem";
-            this.dataMobilToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataMobilToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.dataMobilToolStripMenuItem.Text = "data mobil";
             this.dataMobilToolStripMenuItem.Click += new System.EventHandler(this.dataMobilToolStripMenuItem_Click);
             // 
             // dataGudangToolStripMenuItem
             // 
             this.dataGudangToolStripMenuItem.Name = "dataGudangToolStripMenuItem";
-            this.dataGudangToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataGudangToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.dataGudangToolStripMenuItem.Text = "data gudang";
             this.dataGudangToolStripMenuItem.Click += new System.EventHandler(this.dataGudangToolStripMenuItem_Click);
             // 
             // dataSupirToolStripMenuItem
             // 
             this.dataSupirToolStripMenuItem.Name = "dataSupirToolStripMenuItem";
-            this.dataSupirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataSupirToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.dataSupirToolStripMenuItem.Text = "data supir";
             this.dataSupirToolStripMenuItem.Click += new System.EventHandler(this.dataSupirToolStripMenuItem_Click);
             // 
