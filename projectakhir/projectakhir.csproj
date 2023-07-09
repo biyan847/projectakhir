@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="datadiri_penyewa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datadiri_penyewa.Designer.cs">
+      <DependentUpon>datadiri_penyewa.cs</DependentUpon>
+    </Compile>
     <Compile Include="data_gudang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="datadiri_penyewa.resx">
+      <DependentUpon>datadiri_penyewa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="data_gudang.resx">
       <DependentUpon>data_gudang.cs</DependentUpon>
     </EmbeddedResource>
