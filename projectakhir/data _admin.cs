@@ -49,7 +49,7 @@ namespace projectakhir
             ds.Show();
             this.Hide();
         }
-        
+
         private void dataGridView()
         {
 
@@ -65,7 +65,7 @@ namespace projectakhir
         private void button4_Click(object sender, EventArgs e)
         {
             dataGridView();
-            button4.Enabled=false;
+            button4.Enabled = false;
 
         }
 
@@ -108,9 +108,9 @@ namespace projectakhir
             {
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
                 textBox1.Text = row.Cells["id_admin"].Value.ToString();
-                textBox2.Text = row.Cells["No_Hp"].Value.ToString();
-                textBox3.Text = row.Cells["alamat"].Value.ToString();
-                textBox4.Text = row.Cells["Nama"].Value.ToString();
+                textBox2.Text = row.Cells["Nama"].Value.ToString();
+                textBox3.Text = row.Cells["No_Hp"].Value.ToString();
+                textBox4.Text = row.Cells["alamat"].Value.ToString();
                 comboBox1.Text = row.Cells["jenis_kelamin"].Value.ToString();
             }
             catch (Exception X)
@@ -121,7 +121,7 @@ namespace projectakhir
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Yakin Ingin Menghapus Data : " + textBox1.Text + " ?","Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Yakin Ingin Menghapus Data : " + textBox1.Text + " ?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 koneksi.Open();
                 string queryString = "Delete dbo.Admin where id_admin='" + textBox1.Text + "'";
@@ -133,6 +133,27 @@ namespace projectakhir
                 dataGridView();
                 refreshform();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            koneksi.Open();
+            string queryString = "Update dbo.Admin set No_Hp='" + textBox3.Text + "', alamat='" + textBox4.Text + "', Nama='" + textBox2.Text + "', jenis_kelamin='" + comboBox1.Text + "' where id_admin='"+ textBox1.Text +"'";
+            SqlCommand cmd = new SqlCommand(queryString, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
+            MessageBox.Show("Update Data Berhasil");
+            dataGridView();
+            refreshform();
+            
+            
+        }
+
+        private void data__admin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

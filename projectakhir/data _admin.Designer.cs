@@ -166,6 +166,7 @@
             this.button2.TabIndex = 14;
             this.button2.Text = "Update";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -263,6 +264,7 @@
             this.Controls.Add(this.label1);
             this.Name = "data__admin";
             this.Text = "data__admin";
+            this.Load += new System.EventHandler(this.data__admin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

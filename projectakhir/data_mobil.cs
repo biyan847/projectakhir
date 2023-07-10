@@ -50,8 +50,8 @@ namespace projectakhir
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string platnomot = tbxplatnomor.Text;
-            string jenis = tbxjenis.Text;
+            string platnomor = tbxplatnomor.Text;
+            string jenis = comboBox1.Text;
             string warna = tbxwarna.Text;
             string idAdmin = tbxidAdmin.Text;
             string idGudang = tbxidGudang.Text;
@@ -60,7 +60,7 @@ namespace projectakhir
             string queryString = "INSERT INTO dbo.Mobil (plat_nomor, jenis, warna, id_admin, id_gudang) VALUES (@plat_nomor, @jenis, @warna, @id_admin, @id_gudang)";
             SqlCommand cmd = new SqlCommand(queryString, koneksi);
             cmd.CommandType = CommandType.Text;
-            cmd.Parameters.Add(new SqlParameter("plat_nomot", platnomot));
+            cmd.Parameters.Add(new SqlParameter("plat_nomor", platnomor));
             cmd.Parameters.Add(new SqlParameter("jenis", jenis));
             cmd.Parameters.Add(new SqlParameter("warna", warna));
             cmd.Parameters.Add(new SqlParameter("id_admin", idAdmin));
@@ -93,6 +93,60 @@ namespace projectakhir
         {
             dataGridView();
             button3.Enabled=false;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                tbxplatnomor.Text = row.Cells["plat_nomor"].Value.ToString();
+                comboBox1.Text = row.Cells["jenis"].Value.ToString();
+                tbxwarna.Text = row.Cells["warna"].Value.ToString();
+                tbxidAdmin.Text = row.Cells["id_admin"].Value.ToString();
+                tbxidGudang.Text = row.Cells["id_gudang"].Value.ToString();
+            }
+            catch (Exception X)
+            {
+                MessageBox.Show(X.ToString());
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            koneksi.Open();
+            string queryString = "Update dbo.Mobil set jenis='" + comboBox1.Text + "', warna='" + tbxwarna.Text + "', id_admin='" + tbxidAdmin.Text + "', id_gudang='" + tbxidGudang.Text + "' where plat_nomor='" + tbxplatnomor.Text + "'";
+            SqlCommand cmd = new SqlCommand(queryString, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
+            MessageBox.Show("Update Data Berhasil");
+            dataGridView();
+            refreshform();
+        }
+        private void refreshform()
+        {
+            tbxplatnomor.Text = "";
+            comboBox1.Text = "";
+            tbxwarna.Text = "";
+            tbxidAdmin.Text = "";
+            tbxidGudang.Text = "";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Yakin Ingin Menghapus Data : " + tbxplatnomor.Text + " ?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                koneksi.Open();
+                string queryString = "Delete dbo.Mobil where plat_nomor='" + tbxplatnomor.Text + "'";
+                SqlCommand cmd = new SqlCommand(queryString, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.ExecuteNonQuery();
+                koneksi.Close();
+                MessageBox.Show("Hapus Data Berhasil");
+                dataGridView();
+                refreshform();
+            }
         }
     }
 }

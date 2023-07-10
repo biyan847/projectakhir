@@ -63,6 +63,7 @@ namespace projectakhir
             cmd.ExecuteNonQuery();
             koneksi.Close();
             MessageBox.Show("Data berhasil disimpan", "Sukses!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dataGridView();
             refreshform();
         }
 
@@ -93,6 +94,55 @@ namespace projectakhir
             data__admin da = new data__admin();
             da.Show();
             this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Yakin Ingin Menghapus Data : " + tbxIdGudang.Text + " ?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                koneksi.Open();
+                string queryString = "Delete dbo.Gudang where id_gudang='" + tbxIdGudang.Text + "'";
+                SqlCommand cmd = new SqlCommand(queryString, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.ExecuteNonQuery();
+                koneksi.Close();
+                MessageBox.Show("Hapus Data Berhasil");
+                dataGridView();
+                refreshform();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            koneksi.Open();
+            string queryString = "Update dbo.Gudang set alamat='" + tbxAlamat.Text + "', kapasitas='" + tbxKapasitas.Text +  "' where id_gudang='" + tbxIdGudang.Text + "'";
+            SqlCommand cmd = new SqlCommand(queryString, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
+            MessageBox.Show("Update Data Berhasil");
+            dataGridView();
+            refreshform();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                tbxIdGudang.Text = row.Cells["id_gudang"].Value.ToString();
+                tbxAlamat.Text = row.Cells["alamat"].Value.ToString();
+                tbxKapasitas.Text = row.Cells["kapasitas"].Value.ToString();
+            }
+            catch (Exception X)
+            {
+                MessageBox.Show(X.ToString());
+            }
         }
     }
 }

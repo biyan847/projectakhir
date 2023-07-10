@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(data_mobil));
             this.tbxplatnomor = new System.Windows.Forms.TextBox();
-            this.tbxjenis = new System.Windows.Forms.TextBox();
             this.tbxwarna = new System.Windows.Forms.TextBox();
             this.tbxidAdmin = new System.Windows.Forms.TextBox();
             this.tbxidGudang = new System.Windows.Forms.TextBox();
@@ -50,6 +49,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataSupirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -60,13 +60,6 @@
             this.tbxplatnomor.Name = "tbxplatnomor";
             this.tbxplatnomor.Size = new System.Drawing.Size(100, 22);
             this.tbxplatnomor.TabIndex = 0;
-            // 
-            // tbxjenis
-            // 
-            this.tbxjenis.Location = new System.Drawing.Point(94, 76);
-            this.tbxjenis.Name = "tbxjenis";
-            this.tbxjenis.Size = new System.Drawing.Size(100, 22);
-            this.tbxjenis.TabIndex = 1;
             // 
             // tbxwarna
             // 
@@ -152,6 +145,7 @@
             this.button2.TabIndex = 11;
             this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // toolStrip1
             // 
@@ -209,6 +203,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(784, 235);
             this.dataGridView1.TabIndex = 13;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // button3
             // 
@@ -228,6 +223,7 @@
             this.button4.TabIndex = 15;
             this.button4.Text = "Update";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // dataSupirToolStripMenuItem
             // 
@@ -236,11 +232,24 @@
             this.dataSupirToolStripMenuItem.Text = "data admin";
             this.dataSupirToolStripMenuItem.Click += new System.EventHandler(this.dataSupirToolStripMenuItem_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "SUV",
+            "SEDAN",
+            "PICK UP"});
+            this.comboBox1.Location = new System.Drawing.Point(94, 73);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(100, 24);
+            this.comboBox1.TabIndex = 16;
+            // 
             // data_mobil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
@@ -255,7 +264,6 @@
             this.Controls.Add(this.tbxidGudang);
             this.Controls.Add(this.tbxidAdmin);
             this.Controls.Add(this.tbxwarna);
-            this.Controls.Add(this.tbxjenis);
             this.Controls.Add(this.tbxplatnomor);
             this.Name = "data_mobil";
             this.Text = "data_mobil";
@@ -270,7 +278,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox tbxplatnomor;
-        private System.Windows.Forms.TextBox tbxjenis;
         private System.Windows.Forms.TextBox tbxwarna;
         private System.Windows.Forms.TextBox tbxidAdmin;
         private System.Windows.Forms.TextBox tbxidGudang;
@@ -290,5 +297,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ToolStripMenuItem dataSupirToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
