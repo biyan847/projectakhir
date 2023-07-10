@@ -31,11 +31,6 @@ namespace projectakhir
             this.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-            this.Hide();
-        }
+        
     }
 }

@@ -44,26 +44,31 @@ namespace projectakhir
 
         private void data_supir_Load(object sender, EventArgs e)
         {
-            string idsupir = tbxIdSupir.Text;
-            string nama = tbxNama.Text;
-            string ktp_s = tbxKtp_s.Text;
-            string jenis_kel = tbxJenis_kel.Text;
-            string no_hp = tbxNo_hp.Text;
-            string alamat = tbxAlamat.Text;
-            string plat_nomor = tbxPlat_nomor.Text;
+           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string idsupir = textBox1.Text;
+            string nama = textBox2.Text;
+            string ktp_s = textBox3.Text;
+            string jenis_kel = comboBox1.Text;
+            string no_hp = textBox5.Text;
+            string alamat = textBox6.Text;
+            string plat_nomor = textBox7.Text;
 
             koneksi.Open();
 
             string str = "INSERT INTO dbo.Supir (id_supir,nama,ktp_s,jenis_kel,no_hp,alamat,plat_nomor) VALUES (@id_supir, @nama, @ktp_s,@jenis_kel, @no_hp, @alamat, @plat_nomor)";
             SqlCommand cmd = new SqlCommand(str, koneksi);
             cmd.CommandType = CommandType.Text;
-            cmd.Parameters.Add(new SqlParameter("id_supir", IdSupir));
-            cmd.Parameters.Add(new SqlParameter("nama", Nama));
-            cmd.Parameters.Add(new SqlParameter("ktp_S", Ktp_s));
-            cmd.Parameters.Add(new SqlParameter("jenis_kel", Jenis_kel));
-            cmd.Parameters.Add(new SqlParameter("no_hp", No_hp));
-            cmd.Parameters.Add(new SqlParameter("alamat", Alamat));
-            cmd.Parameters.Add(new SqlParameter("plat_nomor", Plat_nomor));
+            cmd.Parameters.Add(new SqlParameter("id_supir", idsupir));
+            cmd.Parameters.Add(new SqlParameter("nama", nama));
+            cmd.Parameters.Add(new SqlParameter("ktp_S", ktp_s));
+            cmd.Parameters.Add(new SqlParameter("jenis_kel", jenis_kel));
+            cmd.Parameters.Add(new SqlParameter("no_hp", no_hp));
+            cmd.Parameters.Add(new SqlParameter("alamat", alamat));
+            cmd.Parameters.Add(new SqlParameter("plat_nomor", plat_nomor));
             cmd.ExecuteNonQuery();
             koneksi.Close();
             MessageBox.Show("Data berhasil disimpan", "Sukses!", MessageBoxButtons.OK, MessageBoxIcon.Information);
