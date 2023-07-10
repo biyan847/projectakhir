@@ -68,5 +68,12 @@ namespace projectakhir
         {
 
         }
+
+        private void dataAdminToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            data__admin da = new data__admin();
+            da.Show();
+            this.Hide();
+        }
     }
 }

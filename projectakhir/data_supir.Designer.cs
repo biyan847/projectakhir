@@ -53,6 +53,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataAdminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -198,7 +199,8 @@
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dataPenyewaToolStripMenuItem,
             this.dataMobilToolStripMenuItem,
-            this.dataGudangToolStripMenuItem});
+            this.dataGudangToolStripMenuItem,
+            this.dataAdminToolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
@@ -208,21 +210,21 @@
             // dataPenyewaToolStripMenuItem
             // 
             this.dataPenyewaToolStripMenuItem.Name = "dataPenyewaToolStripMenuItem";
-            this.dataPenyewaToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.dataPenyewaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dataPenyewaToolStripMenuItem.Text = "data penyewa";
             this.dataPenyewaToolStripMenuItem.Click += new System.EventHandler(this.dataPenyewaToolStripMenuItem_Click);
             // 
             // dataMobilToolStripMenuItem
             // 
             this.dataMobilToolStripMenuItem.Name = "dataMobilToolStripMenuItem";
-            this.dataMobilToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.dataMobilToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dataMobilToolStripMenuItem.Text = "data mobil";
             this.dataMobilToolStripMenuItem.Click += new System.EventHandler(this.dataMobilToolStripMenuItem_Click);
             // 
             // dataGudangToolStripMenuItem
             // 
             this.dataGudangToolStripMenuItem.Name = "dataGudangToolStripMenuItem";
-            this.dataGudangToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.dataGudangToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dataGudangToolStripMenuItem.Text = "data gudang";
             this.dataGudangToolStripMenuItem.Click += new System.EventHandler(this.dataGudangToolStripMenuItem_Click);
             // 
@@ -242,6 +244,7 @@
             this.button3.TabIndex = 18;
             this.button3.Text = "Open";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -261,6 +264,13 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(760, 185);
             this.dataGridView1.TabIndex = 20;
+            // 
+            // dataAdminToolStripMenuItem
+            // 
+            this.dataAdminToolStripMenuItem.Name = "dataAdminToolStripMenuItem";
+            this.dataAdminToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataAdminToolStripMenuItem.Text = "data admin";
+            this.dataAdminToolStripMenuItem.Click += new System.EventHandler(this.dataAdminToolStripMenuItem_Click);
             // 
             // data_supir
             // 
@@ -324,5 +334,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripMenuItem dataAdminToolStripMenuItem;
     }
 }

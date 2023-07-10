@@ -19,6 +19,7 @@ namespace projectakhir
         public data_mobil()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
         }
 
         private void toolStripDropDownButton1_Click(object sender, EventArgs e)
@@ -67,6 +68,31 @@ namespace projectakhir
             cmd.ExecuteNonQuery();
             koneksi.Close();
             MessageBox.Show("Data berhasil disimpan", "Sukses!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void dataSupirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            data__admin da = new data__admin();
+            da.Show();
+            this.Hide();
+        }
+
+        private void dataGridView()
+        {
+
+            koneksi.Open();
+            string str = "select * from dbo.Mobil";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dataGridView();
+            button3.Enabled=false;
         }
     }
 }

@@ -70,5 +70,29 @@ namespace projectakhir
         {
 
         }
+
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string str = "select * from dbo.Gudang";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            dataGridView();
+            button4.Enabled= false; 
+        }
+
+        private void dataSupirToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            data__admin da = new data__admin();
+            da.Show();
+            this.Hide();
+        }
     }
 }

@@ -73,5 +73,29 @@ namespace projectakhir
             koneksi.Close();
             MessageBox.Show("Data berhasil disimpan", "Sukses!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string str = "select * from dbo.supir";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dataGridView();
+            button4.Enabled = false;
+        }
+
+        private void dataAdminToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            data__admin da = new data__admin();
+            da.Show();
+            this.Hide();
+        }
     }
 }
