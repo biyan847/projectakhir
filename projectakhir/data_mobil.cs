@@ -153,5 +153,17 @@ namespace projectakhir
         {
 
         }
+
+        private void data_mobil_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void homeScreenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HalamanUtama hu = new HalamanUtama();
+            hu.Show();
+            this.Hide();
+        }
     }
 }

@@ -47,6 +47,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.homeScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -56,9 +57,9 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 11);
+            this.label1.Location = new System.Drawing.Point(3, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 16);
+            this.label1.Size = new System.Drawing.Size(75, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Id Gudang";
             // 
@@ -66,9 +67,9 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 50);
+            this.label2.Location = new System.Drawing.Point(3, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 16);
+            this.label2.Size = new System.Drawing.Size(75, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Alamat";
             // 
@@ -76,29 +77,29 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 91);
+            this.label3.Location = new System.Drawing.Point(3, 92);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 16);
+            this.label3.Size = new System.Drawing.Size(75, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Kapasitas";
             // 
             // tbxIdGudang
             // 
-            this.tbxIdGudang.Location = new System.Drawing.Point(85, 3);
+            this.tbxIdGudang.Location = new System.Drawing.Point(84, 3);
             this.tbxIdGudang.Name = "tbxIdGudang";
             this.tbxIdGudang.Size = new System.Drawing.Size(201, 22);
             this.tbxIdGudang.TabIndex = 3;
             // 
             // tbxAlamat
             // 
-            this.tbxAlamat.Location = new System.Drawing.Point(85, 42);
+            this.tbxAlamat.Location = new System.Drawing.Point(84, 43);
             this.tbxAlamat.Name = "tbxAlamat";
             this.tbxAlamat.Size = new System.Drawing.Size(201, 22);
             this.tbxAlamat.TabIndex = 4;
             // 
             // tbxKapasitas
             // 
-            this.tbxKapasitas.Location = new System.Drawing.Point(85, 81);
+            this.tbxKapasitas.Location = new System.Drawing.Point(84, 83);
             this.tbxKapasitas.Name = "tbxKapasitas";
             this.tbxKapasitas.Size = new System.Drawing.Size(201, 22);
             this.tbxKapasitas.TabIndex = 5;
@@ -143,7 +144,8 @@
             this.dataSupirToolStripMenuItem,
             this.dataMobilToolStripMenuItem,
             this.dataPenyewaToolStripMenuItem,
-            this.dataSupirToolStripMenuItem1});
+            this.dataSupirToolStripMenuItem1,
+            this.homeScreenToolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
@@ -153,28 +155,28 @@
             // dataSupirToolStripMenuItem
             // 
             this.dataSupirToolStripMenuItem.Name = "dataSupirToolStripMenuItem";
-            this.dataSupirToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.dataSupirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dataSupirToolStripMenuItem.Text = "data supir";
             this.dataSupirToolStripMenuItem.Click += new System.EventHandler(this.dataSupirToolStripMenuItem_Click);
             // 
             // dataMobilToolStripMenuItem
             // 
             this.dataMobilToolStripMenuItem.Name = "dataMobilToolStripMenuItem";
-            this.dataMobilToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.dataMobilToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dataMobilToolStripMenuItem.Text = "data mobil";
             this.dataMobilToolStripMenuItem.Click += new System.EventHandler(this.dataMobilToolStripMenuItem_Click);
             // 
             // dataPenyewaToolStripMenuItem
             // 
             this.dataPenyewaToolStripMenuItem.Name = "dataPenyewaToolStripMenuItem";
-            this.dataPenyewaToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.dataPenyewaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dataPenyewaToolStripMenuItem.Text = "data penyewa";
             this.dataPenyewaToolStripMenuItem.Click += new System.EventHandler(this.dataPenyewaToolStripMenuItem_Click);
             // 
             // dataSupirToolStripMenuItem1
             // 
             this.dataSupirToolStripMenuItem1.Name = "dataSupirToolStripMenuItem1";
-            this.dataSupirToolStripMenuItem1.Size = new System.Drawing.Size(185, 26);
+            this.dataSupirToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.dataSupirToolStripMenuItem1.Text = "data admin";
             this.dataSupirToolStripMenuItem1.Click += new System.EventHandler(this.dataSupirToolStripMenuItem1_Click);
             // 
@@ -230,6 +232,13 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(289, 120);
             this.tableLayoutPanel1.TabIndex = 12;
             // 
+            // homeScreenToolStripMenuItem
+            // 
+            this.homeScreenToolStripMenuItem.Name = "homeScreenToolStripMenuItem";
+            this.homeScreenToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.homeScreenToolStripMenuItem.Text = "Home Screen";
+            this.homeScreenToolStripMenuItem.Click += new System.EventHandler(this.homeScreenToolStripMenuItem_Click);
+            // 
             // data_gudang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -276,5 +285,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolStripMenuItem dataSupirToolStripMenuItem1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.ToolStripMenuItem homeScreenToolStripMenuItem;
     }
 }

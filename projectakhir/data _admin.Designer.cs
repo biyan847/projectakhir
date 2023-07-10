@@ -51,6 +51,7 @@
             this.dataGudangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataSopirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.homeScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -214,7 +215,8 @@
             this.dataMobilToolStripMenuItem,
             this.dataPenyewaToolStripMenuItem,
             this.dataGudangToolStripMenuItem,
-            this.dataSopirToolStripMenuItem});
+            this.dataSopirToolStripMenuItem,
+            this.homeScreenToolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
@@ -275,6 +277,13 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(307, 165);
             this.tableLayoutPanel1.TabIndex = 18;
             // 
+            // homeScreenToolStripMenuItem
+            // 
+            this.homeScreenToolStripMenuItem.Name = "homeScreenToolStripMenuItem";
+            this.homeScreenToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.homeScreenToolStripMenuItem.Text = "Home Screen";
+            this.homeScreenToolStripMenuItem.Click += new System.EventHandler(this.homeScreenToolStripMenuItem_Click);
+            // 
             // data__admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -325,5 +334,6 @@
         private System.Windows.Forms.ToolStripMenuItem dataGudangToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataSopirToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.ToolStripMenuItem homeScreenToolStripMenuItem;
     }
 }

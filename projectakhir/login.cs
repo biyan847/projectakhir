@@ -43,5 +43,12 @@ namespace projectakhir
             }
            
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginForm back = new LoginForm();
+            back.Show();
+        }
     }
 }

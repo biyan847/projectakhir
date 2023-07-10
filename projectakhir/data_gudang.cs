@@ -149,5 +149,12 @@ namespace projectakhir
         {
 
         }
+
+        private void homeScreenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HalamanUtama hu = new HalamanUtama();
+            hu.Show();
+            this.Hide();
+        }
     }
 }
