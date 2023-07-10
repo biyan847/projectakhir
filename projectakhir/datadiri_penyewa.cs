@@ -26,5 +26,12 @@ namespace projectakhir
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            formkonfirmasipesanan formkonfirmasipesanan = new formkonfirmasipesanan();
+            formkonfirmasipesanan.Show();
+            this.Hide();
+        }
     }
 }
