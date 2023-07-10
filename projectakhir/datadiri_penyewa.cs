@@ -33,5 +33,12 @@ namespace projectakhir
             formkonfirmasipesanan.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            HalamanUtama hu = new HalamanUtama();
+            hu.Show();
+            this.Hide();
+        }
     }
 }
