@@ -144,5 +144,10 @@ namespace projectakhir
                 MessageBox.Show(X.ToString());
             }
         }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }
