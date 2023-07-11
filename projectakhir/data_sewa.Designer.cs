@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(data_sewa));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -42,25 +43,35 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGudangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataMobilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataPenyewaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataSupirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(3, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 16);
+            this.label1.Size = new System.Drawing.Size(231, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "id_sewa";
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 52);
+            this.label2.Location = new System.Drawing.Point(3, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 16);
+            this.label2.Size = new System.Drawing.Size(231, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "tanggal";
             // 
@@ -89,19 +100,21 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 104);
+            this.label3.Location = new System.Drawing.Point(3, 122);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 16);
+            this.label3.Size = new System.Drawing.Size(231, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "ktp penyewa";
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 156);
+            this.label4.Location = new System.Drawing.Point(3, 174);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 16);
+            this.label4.Size = new System.Drawing.Size(231, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "plar nomor";
             // 
@@ -184,11 +197,70 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(800, 27);
+            this.toolStrip1.TabIndex = 8;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dataToolStripMenuItem,
+            this.dataGudangToolStripMenuItem,
+            this.dataMobilToolStripMenuItem,
+            this.dataPenyewaToolStripMenuItem,
+            this.dataSupirToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 24);
+            this.toolStripDropDownButton1.Text = "Menu";
+            // 
+            // dataToolStripMenuItem
+            // 
+            this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
+            this.dataToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataToolStripMenuItem.Text = "data admin";
+            // 
+            // dataGudangToolStripMenuItem
+            // 
+            this.dataGudangToolStripMenuItem.Name = "dataGudangToolStripMenuItem";
+            this.dataGudangToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataGudangToolStripMenuItem.Text = "data gudang";
+            // 
+            // dataMobilToolStripMenuItem
+            // 
+            this.dataMobilToolStripMenuItem.Name = "dataMobilToolStripMenuItem";
+            this.dataMobilToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataMobilToolStripMenuItem.Text = "data mobil";
+            // 
+            // dataPenyewaToolStripMenuItem
+            // 
+            this.dataPenyewaToolStripMenuItem.Name = "dataPenyewaToolStripMenuItem";
+            this.dataPenyewaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataPenyewaToolStripMenuItem.Text = "data penyewa";
+            // 
+            // dataSupirToolStripMenuItem
+            // 
+            this.dataSupirToolStripMenuItem.Name = "dataSupirToolStripMenuItem";
+            this.dataSupirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataSupirToolStripMenuItem.Text = "data supir";
+            // 
             // data_sewa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -201,7 +273,10 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -221,5 +296,12 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem dataToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dataGudangToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dataMobilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dataPenyewaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dataSupirToolStripMenuItem;
     }
 }
