@@ -50,12 +50,12 @@
             this.dataMobilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGudangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataAdminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.homeScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.homeScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -185,12 +185,13 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(617, 150);
+            this.button2.Location = new System.Drawing.Point(617, 126);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 15;
             this.button2.Text = "delete";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // toolStrip1
             // 
@@ -222,34 +223,44 @@
             // dataPenyewaToolStripMenuItem
             // 
             this.dataPenyewaToolStripMenuItem.Name = "dataPenyewaToolStripMenuItem";
-            this.dataPenyewaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataPenyewaToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataPenyewaToolStripMenuItem.Text = "data penyewa";
             this.dataPenyewaToolStripMenuItem.Click += new System.EventHandler(this.dataPenyewaToolStripMenuItem_Click);
             // 
             // dataMobilToolStripMenuItem
             // 
             this.dataMobilToolStripMenuItem.Name = "dataMobilToolStripMenuItem";
-            this.dataMobilToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataMobilToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataMobilToolStripMenuItem.Text = "data mobil";
             this.dataMobilToolStripMenuItem.Click += new System.EventHandler(this.dataMobilToolStripMenuItem_Click);
             // 
             // dataGudangToolStripMenuItem
             // 
             this.dataGudangToolStripMenuItem.Name = "dataGudangToolStripMenuItem";
-            this.dataGudangToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataGudangToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataGudangToolStripMenuItem.Text = "data gudang";
             this.dataGudangToolStripMenuItem.Click += new System.EventHandler(this.dataGudangToolStripMenuItem_Click);
             // 
             // dataAdminToolStripMenuItem
             // 
             this.dataAdminToolStripMenuItem.Name = "dataAdminToolStripMenuItem";
-            this.dataAdminToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataAdminToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataAdminToolStripMenuItem.Text = "data admin";
             this.dataAdminToolStripMenuItem.Click += new System.EventHandler(this.dataAdminToolStripMenuItem_Click);
+            // 
+            // homeScreenToolStripMenuItem
+            // 
+            this.homeScreenToolStripMenuItem.Name = "homeScreenToolStripMenuItem";
+            this.homeScreenToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.homeScreenToolStripMenuItem.Text = "Home Screen";
+            this.homeScreenToolStripMenuItem.Click += new System.EventHandler(this.homeScreenToolStripMenuItem_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "L",
+            "P"});
             this.comboBox1.Location = new System.Drawing.Point(93, 144);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(146, 24);
@@ -273,6 +284,7 @@
             this.button4.TabIndex = 19;
             this.button4.Text = "Update";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // dataGridView1
             // 
@@ -283,6 +295,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(760, 203);
             this.dataGridView1.TabIndex = 20;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // tableLayoutPanel1
             // 
@@ -295,7 +308,6 @@
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBox6, 3, 2);
@@ -305,6 +317,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label7, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label5, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(28, 42);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -314,13 +327,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(535, 188);
             this.tableLayoutPanel1.TabIndex = 21;
-            // 
-            // homeScreenToolStripMenuItem
-            // 
-            this.homeScreenToolStripMenuItem.Name = "homeScreenToolStripMenuItem";
-            this.homeScreenToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.homeScreenToolStripMenuItem.Text = "Home Screen";
-            this.homeScreenToolStripMenuItem.Click += new System.EventHandler(this.homeScreenToolStripMenuItem_Click);
             // 
             // data_supir
             // 

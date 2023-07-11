@@ -72,6 +72,8 @@ namespace projectakhir
             cmd.ExecuteNonQuery();
             koneksi.Close();
             MessageBox.Show("Data berhasil disimpan", "Sukses!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dataGridView();
+            refreshform();
         }
 
         private void dataGridView()
@@ -88,7 +90,7 @@ namespace projectakhir
         private void button3_Click(object sender, EventArgs e)
         {
             dataGridView();
-            button4.Enabled = false;
+            button3.Enabled = false;
         }
 
         private void dataAdminToolStripMenuItem_Click(object sender, EventArgs e)
@@ -103,6 +105,68 @@ namespace projectakhir
             HalamanUtama hu = new HalamanUtama();
             hu.Show();
             this.Hide();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                textBox1.Text = row.Cells["id_supir"].Value.ToString();
+                textBox2.Text = row.Cells["nama"].Value.ToString();
+                textBox3.Text = row.Cells["ktp_s"].Value.ToString();
+                comboBox1.Text = row.Cells["jenis_kel"].Value.ToString();
+                textBox5.Text = row.Cells["no_hp"].Value.ToString();
+                textBox6.Text = row.Cells["alamat"].Value.ToString();
+                textBox7.Text = row.Cells["plat_nomor"].Value.ToString();
+                
+            }
+            catch (Exception X)
+            {
+                MessageBox.Show(X.ToString());
+            }
+
+        }
+        private void refreshform()
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            comboBox1.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            koneksi.Open();
+            string queryString = "Update dbo.Supir set nama='" + textBox2.Text + "', ktp_s='" + textBox3.Text + "', jenis_kel='" + comboBox1.Text + "', no_hp='" + textBox5.Text + "', alamat='" + textBox6.Text + "', plat_nomor='" + textBox7.Text + "' where id_supir='" + textBox1.Text + "'";
+            SqlCommand cmd = new SqlCommand(queryString, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
+            MessageBox.Show("Update Data Berhasil");
+            dataGridView();
+            refreshform();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+                if (MessageBox.Show("Yakin Ingin Menghapus Data : " + textBox1.Text + " ?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    koneksi.Open();
+                    string queryString = "Delete dbo.Supir where id_supir='" + textBox1.Text + "'";
+                    SqlCommand cmd = new SqlCommand(queryString, koneksi);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.ExecuteNonQuery();
+                    koneksi.Close();
+                    MessageBox.Show("Hapus Data Berhasil");
+                    dataGridView();
+                    refreshform();
+                }
+            
         }
     }
 }
