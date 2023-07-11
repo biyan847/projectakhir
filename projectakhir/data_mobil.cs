@@ -68,6 +68,8 @@ namespace projectakhir
             cmd.ExecuteNonQuery();
             koneksi.Close();
             MessageBox.Show("Data berhasil disimpan", "Sukses!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dataGridView();
+            refreshform();
         }
 
         private void dataSupirToolStripMenuItem_Click(object sender, EventArgs e)

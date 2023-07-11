@@ -46,9 +46,10 @@ namespace projectakhir
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
+            HalamanUtama hu = new HalamanUtama();
+            hu.Show();
             this.Close();
-            LoginForm back = new LoginForm();
-            back.Show();
         }
     }
 }
