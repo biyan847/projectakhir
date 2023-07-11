@@ -43,11 +43,12 @@
             this.dataMobilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataPenyewaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataSupirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.homeScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.homeScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataSewaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -145,7 +146,8 @@
             this.dataMobilToolStripMenuItem,
             this.dataPenyewaToolStripMenuItem,
             this.dataSupirToolStripMenuItem1,
-            this.homeScreenToolStripMenuItem});
+            this.homeScreenToolStripMenuItem,
+            this.dataSewaToolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
@@ -179,6 +181,13 @@
             this.dataSupirToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.dataSupirToolStripMenuItem1.Text = "data admin";
             this.dataSupirToolStripMenuItem1.Click += new System.EventHandler(this.dataSupirToolStripMenuItem1_Click);
+            // 
+            // homeScreenToolStripMenuItem
+            // 
+            this.homeScreenToolStripMenuItem.Name = "homeScreenToolStripMenuItem";
+            this.homeScreenToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.homeScreenToolStripMenuItem.Text = "Home Screen";
+            this.homeScreenToolStripMenuItem.Click += new System.EventHandler(this.homeScreenToolStripMenuItem_Click);
             // 
             // button3
             // 
@@ -232,12 +241,12 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(289, 120);
             this.tableLayoutPanel1.TabIndex = 12;
             // 
-            // homeScreenToolStripMenuItem
+            // dataSewaToolStripMenuItem
             // 
-            this.homeScreenToolStripMenuItem.Name = "homeScreenToolStripMenuItem";
-            this.homeScreenToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.homeScreenToolStripMenuItem.Text = "Home Screen";
-            this.homeScreenToolStripMenuItem.Click += new System.EventHandler(this.homeScreenToolStripMenuItem_Click);
+            this.dataSewaToolStripMenuItem.Name = "dataSewaToolStripMenuItem";
+            this.dataSewaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataSewaToolStripMenuItem.Text = "data sewa";
+            this.dataSewaToolStripMenuItem.Click += new System.EventHandler(this.dataSewaToolStripMenuItem_Click);
             // 
             // data_gudang
             // 
@@ -286,5 +295,6 @@
         private System.Windows.Forms.ToolStripMenuItem dataSupirToolStripMenuItem1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ToolStripMenuItem homeScreenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dataSewaToolStripMenuItem;
     }
 }

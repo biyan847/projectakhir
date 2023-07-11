@@ -14,7 +14,7 @@ namespace projectakhir
 {
     public partial class data_sewa : Form
     {
-        private string stringConnection = "data source= FADLISTEV\\FADLI036;database=SewaMobil;User ID=sa;Password=fad036";
+        private string stringConnection = "data source= FADLISTEV\\FADLI036;database=SEWAMobil2;User ID=sa;Password=fad036";
         private SqlConnection koneksi;
         public data_sewa()
         {
@@ -46,12 +46,12 @@ namespace projectakhir
             string plat_nomor = textBox3.Text;
             koneksi.Open();
 
-            string queryString = "INSERT INTO dbo.sewa (id_sewa, tanggal, ktp_P, plat_nomor,) VALUES (@id_sewa, @tanggal, @ktp_P, @plat_nomor, @)";
+            string queryString = "INSERT INTO dbo.sewa (id_sewa, tanggal, ktp_p, plat_nomor) VALUES (@id_sewa, @tanggal, @ktp_p, @plat_nomor)";
             SqlCommand cmd = new SqlCommand(queryString, koneksi);
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add(new SqlParameter("id_sewa", idsewa));
-            cmd.Parameters.Add(new SqlParameter("No_Hp", tanggal));
-            cmd.Parameters.Add(new SqlParameter("ktp_P", ktp_p));
+            cmd.Parameters.Add(new SqlParameter("tanggal", tanggal));
+            cmd.Parameters.Add(new SqlParameter("ktp_p", ktp_p));
             cmd.Parameters.Add(new SqlParameter("plat_nomor", plat_nomor));
             cmd.ExecuteNonQuery();
             koneksi.Close();
@@ -75,7 +75,18 @@ namespace projectakhir
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show("Yakin Ingin Menghapus Data : " + textBox1.Text + " ?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                koneksi.Open();
+                string queryString = "Delete dbo.sewa where id_sewa='" + textBox1.Text + "'";
+                SqlCommand cmd = new SqlCommand(queryString, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.ExecuteNonQuery();
+                koneksi.Close();
+                MessageBox.Show("Hapus Data Berhasil");
+                dataGridView();
+                refreshform();
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -98,6 +109,61 @@ namespace projectakhir
             {
                 MessageBox.Show(X.ToString());
             }
+        }
+
+        private void dataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            data__admin da = new data__admin();
+            da.Show();
+            this.Hide();
+        }
+
+        private void dataGudangToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            data_gudang dg = new data_gudang();
+            dg.Show();
+            this.Hide();
+        }
+
+        private void dataMobilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            data_mobil dm = new data_mobil();
+            dm.Show();
+            this.Hide();
+        }
+
+        private void dataPenyewaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            data_penyewa dp = new data_penyewa();
+            dp.Show();
+            this.Hide();
+        }
+
+        private void dataSupirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            data_supir ds = new data_supir();
+            ds.Show();
+            this.Hide();
+        }
+
+        private void homeScreenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HalamanUtama hu = new HalamanUtama();
+            hu.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            koneksi.Open();
+            string queryString = "Update dbo.sewa set tanggal='" + dateTimePicker1.Text + "', ktp_p='" + textBox2.Text + "', plat_nomor='" + textBox3.Text + "' where id_sewa='" + textBox1.Text + "'";
+            SqlCommand cmd = new SqlCommand(queryString, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
+            MessageBox.Show("Update Data Berhasil");
+            dataGridView();
+            refreshform();
         }
     }
 }

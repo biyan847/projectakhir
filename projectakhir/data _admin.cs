@@ -13,7 +13,7 @@ namespace projectakhir
 {
     public partial class data__admin : Form
     {
-        private string stringConnection = "data source= FADLISTEV\\FADLI036;database=SewaMobil;User ID=sa;Password=fad036";
+        private string stringConnection = "data source= FADLISTEV\\FADLI036;database=SEWAMobil2;User ID=sa;Password=fad036";
         private SqlConnection koneksi;
         public data__admin()
         {
@@ -160,6 +160,13 @@ namespace projectakhir
         {
             HalamanUtama hu = new HalamanUtama();
             hu.Show();
+            this.Hide();
+        }
+
+        private void dataSewaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            data_sewa ds = new data_sewa();
+            ds.Show();
             this.Hide();
         }
     }

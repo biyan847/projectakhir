@@ -13,7 +13,7 @@ namespace projectakhir
 {
     public partial class data_penyewa : Form
     {
-        private string stringConnection = "data source= FADLISTEV\\FADLI036;database=SewaMobil;User ID=sa;Password=fad036";
+        private string stringConnection = "data source= FADLISTEV\\FADLI036;database=SEWAMobil2;User ID=sa;Password=fad036";
         private SqlConnection koneksi;
         public data_penyewa()
         {
@@ -148,6 +148,13 @@ namespace projectakhir
             textBox7.Text = "";
             comboBox2.Text = "";
             textBox8.Text = "";
+        }
+
+        private void datasewaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            data_sewa ds = new data_sewa();
+            ds.Show();
+            this.Hide();
         }
     }
 }

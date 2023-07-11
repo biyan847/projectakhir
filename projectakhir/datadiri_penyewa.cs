@@ -13,7 +13,7 @@ namespace projectakhir
 {
     public partial class datadiri_penyewa : Form
     {
-        private string stringConnection = "data source= FADLISTEV\\FADLI036;database=SewaMobil;User ID=sa;Password=fad036";
+        private string stringConnection = "data source= FADLISTEV\\FADLI036;database=SEWAMobil2;User ID=sa;Password=fad036";
         private SqlConnection koneksi;
         public datadiri_penyewa()
         {

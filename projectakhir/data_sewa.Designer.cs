@@ -50,6 +50,7 @@
             this.dataMobilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataPenyewaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataSupirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.homeScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -186,6 +187,7 @@
             this.button3.TabIndex = 6;
             this.button3.Text = "update";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -217,7 +219,8 @@
             this.dataGudangToolStripMenuItem,
             this.dataMobilToolStripMenuItem,
             this.dataPenyewaToolStripMenuItem,
-            this.dataSupirToolStripMenuItem});
+            this.dataSupirToolStripMenuItem,
+            this.homeScreenToolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
@@ -229,30 +232,42 @@
             this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
             this.dataToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dataToolStripMenuItem.Text = "data admin";
+            this.dataToolStripMenuItem.Click += new System.EventHandler(this.dataToolStripMenuItem_Click);
             // 
             // dataGudangToolStripMenuItem
             // 
             this.dataGudangToolStripMenuItem.Name = "dataGudangToolStripMenuItem";
             this.dataGudangToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dataGudangToolStripMenuItem.Text = "data gudang";
+            this.dataGudangToolStripMenuItem.Click += new System.EventHandler(this.dataGudangToolStripMenuItem_Click);
             // 
             // dataMobilToolStripMenuItem
             // 
             this.dataMobilToolStripMenuItem.Name = "dataMobilToolStripMenuItem";
             this.dataMobilToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dataMobilToolStripMenuItem.Text = "data mobil";
+            this.dataMobilToolStripMenuItem.Click += new System.EventHandler(this.dataMobilToolStripMenuItem_Click);
             // 
             // dataPenyewaToolStripMenuItem
             // 
             this.dataPenyewaToolStripMenuItem.Name = "dataPenyewaToolStripMenuItem";
             this.dataPenyewaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dataPenyewaToolStripMenuItem.Text = "data penyewa";
+            this.dataPenyewaToolStripMenuItem.Click += new System.EventHandler(this.dataPenyewaToolStripMenuItem_Click);
             // 
             // dataSupirToolStripMenuItem
             // 
             this.dataSupirToolStripMenuItem.Name = "dataSupirToolStripMenuItem";
             this.dataSupirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dataSupirToolStripMenuItem.Text = "data supir";
+            this.dataSupirToolStripMenuItem.Click += new System.EventHandler(this.dataSupirToolStripMenuItem_Click);
+            // 
+            // homeScreenToolStripMenuItem
+            // 
+            this.homeScreenToolStripMenuItem.Name = "homeScreenToolStripMenuItem";
+            this.homeScreenToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.homeScreenToolStripMenuItem.Text = "HomeScreen";
+            this.homeScreenToolStripMenuItem.Click += new System.EventHandler(this.homeScreenToolStripMenuItem_Click);
             // 
             // data_sewa
             // 
@@ -303,5 +318,6 @@
         private System.Windows.Forms.ToolStripMenuItem dataMobilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataPenyewaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataSupirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem homeScreenToolStripMenuItem;
     }
 }
