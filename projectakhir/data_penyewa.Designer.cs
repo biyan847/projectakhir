@@ -55,9 +55,9 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -74,6 +74,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(356, 362);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // button1
             // 
@@ -153,7 +154,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 27);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Delete";
+            this.button2.Text = "Update";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -163,8 +164,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 28);
             this.button3.TabIndex = 4;
-            this.button3.Text = "Update";
+            this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 
@@ -337,13 +339,15 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(392, 362);
             this.tableLayoutPanel1.TabIndex = 21;
             // 
-            // comboBox2
+            // label9
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(116, 111);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(258, 24);
-            this.comboBox2.TabIndex = 21;
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 334);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(107, 16);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Plat Nomor";
             // 
             // label11
             // 
@@ -355,15 +359,13 @@
             this.label11.TabIndex = 23;
             this.label11.Text = "ID Admin";
             // 
-            // label9
+            // comboBox2
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 334);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(107, 16);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "Plat Nomor";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(116, 111);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(258, 24);
+            this.comboBox2.TabIndex = 21;
             // 
             // textBox4
             // 

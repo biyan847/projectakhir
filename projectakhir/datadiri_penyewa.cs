@@ -42,11 +42,11 @@ namespace projectakhir
             string kota = textBox6.Text;
             string provinsi = textBox7.Text;
             string jenismobil = comboBox1.Text;
-            string idadmin = "A12";
-            string platnomor = "AE 214 BE";
+            string idadmin = comboBox3.Text;
+            string platnomor = comboBox4.Text;
             koneksi.Open();
 
-            string queryString = "INSERT INTO dbo.penyewa (ktp_p, nama, no_hp, jenis_kel, jalan, kota, provinsi, id_admin, plat_nomor, jenis_mobil) VALUES (@ktp_p, @nama, @no_hp, @jenis_kel, @kota, @provinsi, A12, AE214BE, @jenis_mobil)";
+            string queryString = "INSERT INTO dbo.penyewa (ktp_p, nama, no_hp, jenis_kel, jalan, kota, provinsi, id_admin, plat_nomor, jenis_mobil) VALUES (@ktp_p, @nama, @no_hp, @jenis_kel, @jalan, @kota, @provinsi, @id_admin, @plat_nomor, @jenis_mobil)";
             SqlCommand cmd = new SqlCommand(queryString, koneksi);
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add(new SqlParameter("ktp_p", ktp));
