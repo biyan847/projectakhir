@@ -16,5 +16,11 @@ namespace projectakhir
         {
             InitializeComponent();
         }
+
+        private void data_sewa_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
