@@ -48,11 +48,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -275,16 +275,15 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(285, 334);
             this.tableLayoutPanel1.TabIndex = 20;
             // 
-            // button2
+            // label13
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Info;
-            this.button2.Location = new System.Drawing.Point(257, 390);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Back";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(3, 300);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(81, 32);
+            this.label13.TabIndex = 22;
+            this.label13.Text = "PLAT NOMOR";
             // 
             // label12
             // 
@@ -295,16 +294,6 @@
             this.label12.Size = new System.Drawing.Size(81, 16);
             this.label12.TabIndex = 21;
             this.label12.Text = "ID ADMIN";
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 300);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(81, 32);
-            this.label13.TabIndex = 22;
-            this.label13.Text = "PLAT NOMOR";
             // 
             // comboBox3
             // 
@@ -326,6 +315,17 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(191, 24);
             this.comboBox4.TabIndex = 24;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.Info;
+            this.button2.Location = new System.Drawing.Point(257, 390);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 21;
+            this.button2.Text = "Back";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // datadiri_penyewa
             // 

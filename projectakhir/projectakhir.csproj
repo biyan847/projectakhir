@@ -76,6 +76,12 @@
     <Compile Include="data_penyewa.Designer.cs">
       <DependentUpon>data_penyewa.cs</DependentUpon>
     </Compile>
+    <Compile Include="data_sewa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="data_sewa.Designer.cs">
+      <DependentUpon>data_sewa.cs</DependentUpon>
+    </Compile>
     <Compile Include="data_supir.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="data_penyewa.resx">
       <DependentUpon>data_penyewa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data_sewa.resx">
+      <DependentUpon>data_sewa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="data_supir.resx">
       <DependentUpon>data_supir.cs</DependentUpon>

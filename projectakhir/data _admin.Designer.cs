@@ -50,8 +50,9 @@
             this.dataPenyewaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGudangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataSopirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.homeScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.dataSewaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -63,7 +64,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 16);
+            this.label1.Size = new System.Drawing.Size(126, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID admin";
             // 
@@ -73,7 +74,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 16);
+            this.label2.Size = new System.Drawing.Size(126, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nama";
             // 
@@ -83,7 +84,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(3, 74);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 16);
+            this.label3.Size = new System.Drawing.Size(126, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "No hp";
             // 
@@ -93,7 +94,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(3, 107);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(147, 16);
+            this.label4.Size = new System.Drawing.Size(126, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "alamat";
             // 
@@ -103,36 +104,36 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(3, 140);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(147, 16);
+            this.label5.Size = new System.Drawing.Size(126, 16);
             this.label5.TabIndex = 4;
             this.label5.Text = "jenis kelamin";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(156, 3);
+            this.textBox1.Location = new System.Drawing.Point(135, 3);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(148, 22);
+            this.textBox1.Size = new System.Drawing.Size(169, 22);
             this.textBox1.TabIndex = 7;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(156, 36);
+            this.textBox2.Location = new System.Drawing.Point(135, 36);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(148, 22);
+            this.textBox2.Size = new System.Drawing.Size(169, 22);
             this.textBox2.TabIndex = 8;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(156, 69);
+            this.textBox3.Location = new System.Drawing.Point(135, 69);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(148, 22);
+            this.textBox3.Size = new System.Drawing.Size(169, 22);
             this.textBox3.TabIndex = 9;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(156, 102);
+            this.textBox4.Location = new System.Drawing.Point(135, 102);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(148, 22);
+            this.textBox4.Size = new System.Drawing.Size(169, 22);
             this.textBox4.TabIndex = 10;
             // 
             // button1
@@ -151,9 +152,9 @@
             this.comboBox1.Items.AddRange(new object[] {
             "L",
             "P"});
-            this.comboBox1.Location = new System.Drawing.Point(156, 135);
+            this.comboBox1.Location = new System.Drawing.Point(135, 135);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(148, 24);
+            this.comboBox1.Size = new System.Drawing.Size(169, 24);
             this.comboBox1.TabIndex = 12;
             // 
             // dataGridView1
@@ -216,7 +217,8 @@
             this.dataPenyewaToolStripMenuItem,
             this.dataGudangToolStripMenuItem,
             this.dataSopirToolStripMenuItem,
-            this.homeScreenToolStripMenuItem});
+            this.homeScreenToolStripMenuItem,
+            this.dataSewaToolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
@@ -251,11 +253,18 @@
             this.dataSopirToolStripMenuItem.Text = "data sopir";
             this.dataSopirToolStripMenuItem.Click += new System.EventHandler(this.dataSopirToolStripMenuItem_Click);
             // 
+            // homeScreenToolStripMenuItem
+            // 
+            this.homeScreenToolStripMenuItem.Name = "homeScreenToolStripMenuItem";
+            this.homeScreenToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.homeScreenToolStripMenuItem.Text = "Home Screen";
+            this.homeScreenToolStripMenuItem.Click += new System.EventHandler(this.homeScreenToolStripMenuItem_Click);
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.99674F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.00326F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
@@ -277,12 +286,11 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(307, 165);
             this.tableLayoutPanel1.TabIndex = 18;
             // 
-            // homeScreenToolStripMenuItem
+            // dataSewaToolStripMenuItem
             // 
-            this.homeScreenToolStripMenuItem.Name = "homeScreenToolStripMenuItem";
-            this.homeScreenToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.homeScreenToolStripMenuItem.Text = "Home Screen";
-            this.homeScreenToolStripMenuItem.Click += new System.EventHandler(this.homeScreenToolStripMenuItem_Click);
+            this.dataSewaToolStripMenuItem.Name = "dataSewaToolStripMenuItem";
+            this.dataSewaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataSewaToolStripMenuItem.Text = "data sewa";
             // 
             // data__admin
             // 
@@ -335,5 +343,6 @@
         private System.Windows.Forms.ToolStripMenuItem dataSopirToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ToolStripMenuItem homeScreenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dataSewaToolStripMenuItem;
     }
 }
