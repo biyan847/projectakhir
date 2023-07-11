@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(data_mobil));
             this.tbxplatnomor = new System.Windows.Forms.TextBox();
             this.tbxwarna = new System.Windows.Forms.TextBox();
-            this.tbxidAdmin = new System.Windows.Forms.TextBox();
-            this.tbxidGudang = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,12 +45,14 @@
             this.dataPenyewaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataSupirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataSewaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataSewaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -71,20 +71,6 @@
             this.tbxwarna.Name = "tbxwarna";
             this.tbxwarna.Size = new System.Drawing.Size(333, 22);
             this.tbxwarna.TabIndex = 2;
-            // 
-            // tbxidAdmin
-            // 
-            this.tbxidAdmin.Location = new System.Drawing.Point(93, 114);
-            this.tbxidAdmin.Name = "tbxidAdmin";
-            this.tbxidAdmin.Size = new System.Drawing.Size(333, 22);
-            this.tbxidAdmin.TabIndex = 3;
-            // 
-            // tbxidGudang
-            // 
-            this.tbxidGudang.Location = new System.Drawing.Point(93, 151);
-            this.tbxidGudang.Name = "tbxidGudang";
-            this.tbxidGudang.Size = new System.Drawing.Size(333, 22);
-            this.tbxidGudang.TabIndex = 4;
             // 
             // label1
             // 
@@ -188,37 +174,44 @@
             // dataGudangToolStripMenuItem
             // 
             this.dataGudangToolStripMenuItem.Name = "dataGudangToolStripMenuItem";
-            this.dataGudangToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataGudangToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataGudangToolStripMenuItem.Text = "data gudang";
             this.dataGudangToolStripMenuItem.Click += new System.EventHandler(this.dataGudangToolStripMenuItem_Click);
             // 
             // dataSupriToolStripMenuItem
             // 
             this.dataSupriToolStripMenuItem.Name = "dataSupriToolStripMenuItem";
-            this.dataSupriToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataSupriToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataSupriToolStripMenuItem.Text = "data supir";
             this.dataSupriToolStripMenuItem.Click += new System.EventHandler(this.dataSupriToolStripMenuItem_Click);
             // 
             // dataPenyewaToolStripMenuItem
             // 
             this.dataPenyewaToolStripMenuItem.Name = "dataPenyewaToolStripMenuItem";
-            this.dataPenyewaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataPenyewaToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataPenyewaToolStripMenuItem.Text = "data penyewa";
             this.dataPenyewaToolStripMenuItem.Click += new System.EventHandler(this.dataPenyewaToolStripMenuItem_Click);
             // 
             // dataSupirToolStripMenuItem
             // 
             this.dataSupirToolStripMenuItem.Name = "dataSupirToolStripMenuItem";
-            this.dataSupirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataSupirToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataSupirToolStripMenuItem.Text = "data admin";
             this.dataSupirToolStripMenuItem.Click += new System.EventHandler(this.dataSupirToolStripMenuItem_Click);
             // 
             // homeScreenToolStripMenuItem
             // 
             this.homeScreenToolStripMenuItem.Name = "homeScreenToolStripMenuItem";
-            this.homeScreenToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.homeScreenToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.homeScreenToolStripMenuItem.Text = "Home Screen";
             this.homeScreenToolStripMenuItem.Click += new System.EventHandler(this.homeScreenToolStripMenuItem_Click);
+            // 
+            // dataSewaToolStripMenuItem
+            // 
+            this.dataSewaToolStripMenuItem.Name = "dataSewaToolStripMenuItem";
+            this.dataSewaToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.dataSewaToolStripMenuItem.Text = "data sewa";
+            this.dataSewaToolStripMenuItem.Click += new System.EventHandler(this.dataSewaToolStripMenuItem_Click);
             // 
             // dataGridView1
             // 
@@ -256,8 +249,8 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "SUV",
-            "SEDAN",
-            "PICK UP"});
+            "Sedan",
+            "PickUp"});
             this.comboBox1.Location = new System.Drawing.Point(93, 40);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(333, 24);
@@ -270,14 +263,14 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.5045F));
             this.tableLayoutPanel1.Controls.Add(this.tbxplatnomor, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tbxidAdmin, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.tbxidGudang, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.tbxwarna, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.comboBox2, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.comboBox3, 1, 4);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 46);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -289,12 +282,21 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(444, 186);
             this.tableLayoutPanel1.TabIndex = 17;
             // 
-            // dataSewaToolStripMenuItem
+            // comboBox2
             // 
-            this.dataSewaToolStripMenuItem.Name = "dataSewaToolStripMenuItem";
-            this.dataSewaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.dataSewaToolStripMenuItem.Text = "data sewa";
-            this.dataSewaToolStripMenuItem.Click += new System.EventHandler(this.dataSewaToolStripMenuItem_Click);
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(93, 114);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(333, 24);
+            this.comboBox2.TabIndex = 17;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(93, 151);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(333, 24);
+            this.comboBox3.TabIndex = 18;
             // 
             // data_mobil
             // 
@@ -326,8 +328,6 @@
 
         private System.Windows.Forms.TextBox tbxplatnomor;
         private System.Windows.Forms.TextBox tbxwarna;
-        private System.Windows.Forms.TextBox tbxidAdmin;
-        private System.Windows.Forms.TextBox tbxidGudang;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -348,5 +348,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ToolStripMenuItem homeScreenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataSewaToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }

@@ -34,7 +34,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,12 +50,13 @@
             this.dataGudangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataAdminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataSewaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataSewaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -96,13 +96,6 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(145, 22);
             this.textBox6.TabIndex = 5;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(369, 3);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(145, 22);
-            this.textBox7.TabIndex = 6;
             // 
             // label1
             // 
@@ -225,37 +218,44 @@
             // dataPenyewaToolStripMenuItem
             // 
             this.dataPenyewaToolStripMenuItem.Name = "dataPenyewaToolStripMenuItem";
-            this.dataPenyewaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataPenyewaToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataPenyewaToolStripMenuItem.Text = "data penyewa";
             this.dataPenyewaToolStripMenuItem.Click += new System.EventHandler(this.dataPenyewaToolStripMenuItem_Click);
             // 
             // dataMobilToolStripMenuItem
             // 
             this.dataMobilToolStripMenuItem.Name = "dataMobilToolStripMenuItem";
-            this.dataMobilToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataMobilToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataMobilToolStripMenuItem.Text = "data mobil";
             this.dataMobilToolStripMenuItem.Click += new System.EventHandler(this.dataMobilToolStripMenuItem_Click);
             // 
             // dataGudangToolStripMenuItem
             // 
             this.dataGudangToolStripMenuItem.Name = "dataGudangToolStripMenuItem";
-            this.dataGudangToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataGudangToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataGudangToolStripMenuItem.Text = "data gudang";
             this.dataGudangToolStripMenuItem.Click += new System.EventHandler(this.dataGudangToolStripMenuItem_Click);
             // 
             // dataAdminToolStripMenuItem
             // 
             this.dataAdminToolStripMenuItem.Name = "dataAdminToolStripMenuItem";
-            this.dataAdminToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataAdminToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.dataAdminToolStripMenuItem.Text = "data admin";
             this.dataAdminToolStripMenuItem.Click += new System.EventHandler(this.dataAdminToolStripMenuItem_Click);
             // 
             // homeScreenToolStripMenuItem
             // 
             this.homeScreenToolStripMenuItem.Name = "homeScreenToolStripMenuItem";
-            this.homeScreenToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.homeScreenToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.homeScreenToolStripMenuItem.Text = "Home Screen";
             this.homeScreenToolStripMenuItem.Click += new System.EventHandler(this.homeScreenToolStripMenuItem_Click);
+            // 
+            // dataSewaToolStripMenuItem
+            // 
+            this.dataSewaToolStripMenuItem.Name = "dataSewaToolStripMenuItem";
+            this.dataSewaToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.dataSewaToolStripMenuItem.Text = "data sewa";
+            this.dataSewaToolStripMenuItem.Click += new System.EventHandler(this.dataSewaToolStripMenuItem_Click);
             // 
             // comboBox1
             // 
@@ -313,13 +313,13 @@
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBox6, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBox7, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox5, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.label6, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.label7, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label5, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.comboBox2, 3, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(28, 42);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -330,12 +330,13 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(535, 188);
             this.tableLayoutPanel1.TabIndex = 21;
             // 
-            // dataSewaToolStripMenuItem
+            // comboBox2
             // 
-            this.dataSewaToolStripMenuItem.Name = "dataSewaToolStripMenuItem";
-            this.dataSewaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.dataSewaToolStripMenuItem.Text = "data sewa";
-            this.dataSewaToolStripMenuItem.Click += new System.EventHandler(this.dataSewaToolStripMenuItem_Click);
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(369, 3);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(145, 24);
+            this.comboBox2.TabIndex = 18;
             // 
             // data_supir
             // 
@@ -370,7 +371,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -393,5 +393,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ToolStripMenuItem homeScreenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataSewaToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

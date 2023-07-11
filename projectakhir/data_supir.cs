@@ -55,7 +55,7 @@ namespace projectakhir
             string jenis_kel = comboBox1.Text;
             string no_hp = textBox5.Text;
             string alamat = textBox6.Text;
-            string plat_nomor = textBox7.Text;
+            string plat_nomor = comboBox2.Text;
 
             koneksi.Open();
 
@@ -91,6 +91,7 @@ namespace projectakhir
         {
             dataGridView();
             button3.Enabled = false;
+            ComboBox2();
         }
 
         private void dataAdminToolStripMenuItem_Click(object sender, EventArgs e)
@@ -118,7 +119,7 @@ namespace projectakhir
                 comboBox1.Text = row.Cells["jenis_kel"].Value.ToString();
                 textBox5.Text = row.Cells["no_hp"].Value.ToString();
                 textBox6.Text = row.Cells["alamat"].Value.ToString();
-                textBox7.Text = row.Cells["plat_nomor"].Value.ToString();
+                comboBox2.Text = row.Cells["plat_nomor"].Value.ToString();
                 
             }
             catch (Exception X)
@@ -135,13 +136,13 @@ namespace projectakhir
             comboBox1.Text = "";
             textBox5.Text = "";
             textBox6.Text = "";
-            textBox7.Text = "";
+            comboBox2.Text = "";
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             koneksi.Open();
-            string queryString = "Update dbo.Supir set nama='" + textBox2.Text + "', ktp_s='" + textBox3.Text + "', jenis_kel='" + comboBox1.Text + "', no_hp='" + textBox5.Text + "', alamat='" + textBox6.Text + "', plat_nomor='" + textBox7.Text + "' where id_supir='" + textBox1.Text + "'";
+            string queryString = "Update dbo.Supir set nama='" + textBox2.Text + "', ktp_s='" + textBox3.Text + "', jenis_kel='" + comboBox1.Text + "', no_hp='" + textBox5.Text + "', alamat='" + textBox6.Text + "', plat_nomor='" + comboBox2.Text + "' where id_supir='" + textBox1.Text + "'";
             SqlCommand cmd = new SqlCommand(queryString, koneksi);
             cmd.CommandType = CommandType.Text;
             cmd.ExecuteNonQuery();
@@ -174,6 +175,30 @@ namespace projectakhir
             data_sewa ds = new data_sewa();
             ds.Show();
             this.Hide();
+        }
+
+        private void ComboBox2()
+        {
+            koneksi.Open();
+            string query = "SELECT plat_nomor FROM Mobil";
+            SqlCommand cmd = new SqlCommand(query, koneksi);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("plat_nomor");
+
+            while (reader.Read())
+            {
+                DataRow row = dt.NewRow();
+                row["plat_nomor"] = reader["plat_nomor"].ToString();
+                dt.Rows.Add(row);
+            }
+
+            koneksi.Close();
+
+            comboBox2.DisplayMember = "plat_nomor";
+            comboBox2.ValueMember = "plat_nomor";
+            comboBox2.DataSource = dt;
         }
     }
 }

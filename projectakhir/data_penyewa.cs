@@ -62,6 +62,8 @@ namespace projectakhir
         {
             dataGridView();
             button1.Enabled = false;
+            ComboBox3();
+            ComboBox4();
         }
 
         private void data_penyewa_Load(object sender, EventArgs e)
@@ -87,7 +89,7 @@ namespace projectakhir
         {
 
             koneksi.Open();
-            string queryString = "Update dbo.penyewa set nama='" + textBox2.Text + "', no_hp='" + textBox3.Text + "', jenis_kel='" + comboBox2.Text + "', jalan='" + textBox5.Text + "', kota='" + textBox6.Text + "', provinsi='" + textBox7.Text + "', jenis_mobil='" + comboBox1.Text + "', id_admin='" + textBox4.Text + "', plat_nomor='" + textBox8.Text + "' where ktp_p='" + textBox1.Text + "'";
+            string queryString = "Update dbo.penyewa set nama='" + textBox2.Text + "', no_hp='" + textBox3.Text + "', jenis_kel='" + comboBox2.Text + "', jalan='" + textBox5.Text + "', kota='" + textBox6.Text + "', provinsi='" + textBox7.Text + "', jenis_mobil='" + comboBox1.Text + "', id_admin='" + comboBox3.Text + "', plat_nomor='" + comboBox4.Text + "' where ktp_p='" + textBox1.Text + "'";
             SqlCommand cmd = new SqlCommand(queryString, koneksi);
             cmd.CommandType = CommandType.Text;
             cmd.ExecuteNonQuery();
@@ -110,8 +112,8 @@ namespace projectakhir
                 textBox6.Text = row.Cells["kota"].Value.ToString();
                 textBox7.Text = row.Cells["provinsi"].Value.ToString();
                 comboBox1.Text = row.Cells["jenis_mobil"].Value.ToString();
-                textBox4.Text = row.Cells["id_admin"].Value.ToString();
-                textBox8.Text = row.Cells["plat_nomor"].Value.ToString();
+                comboBox3.Text = row.Cells["id_admin"].Value.ToString();
+                comboBox4.Text = row.Cells["plat_nomor"].Value.ToString();
 
             }
             catch (Exception X)
@@ -142,12 +144,12 @@ namespace projectakhir
             textBox2.Text = "";
             textBox3.Text = "";
             comboBox1.Text = "";
-            textBox4.Text = "";
+            comboBox3.Text = "";
             textBox5.Text = "";
             textBox6.Text = "";
             textBox7.Text = "";
             comboBox2.Text = "";
-            textBox8.Text = "";
+            comboBox4.Text = "";
         }
 
         private void datasewaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -155,6 +157,52 @@ namespace projectakhir
             data_sewa ds = new data_sewa();
             ds.Show();
             this.Hide();
+        }
+        private void ComboBox3()
+        {
+            koneksi.Open();
+            string query = "SELECT id_admin FROM Admin";
+            SqlCommand cmd = new SqlCommand(query, koneksi);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("id_admin");
+
+            while (reader.Read())
+            {
+                DataRow row = dt.NewRow();
+                row["id_admin"] = reader["id_admin"].ToString();
+                dt.Rows.Add(row);
+            }
+
+            koneksi.Close();
+
+            comboBox3.DisplayMember = "id_admin";
+            comboBox3.ValueMember = "id_admin";
+            comboBox3.DataSource = dt;
+        }
+        private void ComboBox4()
+        {
+            koneksi.Open();
+            string query = "SELECT plat_nomor FROM Mobil";
+            SqlCommand cmd = new SqlCommand(query, koneksi);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("plat_nomor");
+
+            while (reader.Read())
+            {
+                DataRow row = dt.NewRow();
+                row["plat_nomor"] = reader["plat_nomor"].ToString();
+                dt.Rows.Add(row);
+            }
+
+            koneksi.Close();
+
+            comboBox4.DisplayMember = "plat_nomor";
+            comboBox4.ValueMember = "plat_nomor";
+            comboBox4.DataSource = dt;
         }
     }
 }

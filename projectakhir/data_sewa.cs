@@ -42,8 +42,8 @@ namespace projectakhir
         {
             string idsewa = textBox1.Text;
             string tanggal = dateTimePicker1.Text;
-            string ktp_p = textBox2.Text;
-            string plat_nomor = textBox3.Text;
+            string ktp_p = comboBox1.Text;
+            string plat_nomor = comboBox2.Text;
             koneksi.Open();
 
             string queryString = "INSERT INTO dbo.sewa (id_sewa, tanggal, ktp_p, plat_nomor) VALUES (@id_sewa, @tanggal, @ktp_p, @plat_nomor)";
@@ -64,12 +64,14 @@ namespace projectakhir
         {
             dataGridView();
             button4.Enabled = false;
+            ComoBox1();
+            ComoBox2();
         }
         private void refreshform()
         {
             textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
+            comboBox1.Text = "";
+            comboBox2.Text = "";
             dateTimePicker1.Text = "";
         }
 
@@ -102,8 +104,8 @@ namespace projectakhir
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
                 textBox1.Text = row.Cells["id_sewa"].Value.ToString();
                 dateTimePicker1.Text = row.Cells["tanggal"].Value.ToString();
-                textBox2.Text = row.Cells["ktp_p"].Value.ToString();
-                textBox3.Text = row.Cells["plat_nomor"].Value.ToString();
+                comboBox1.Text = row.Cells["ktp_p"].Value.ToString();
+                comboBox2.Text = row.Cells["plat_nomor"].Value.ToString();
             }
             catch (Exception X)
             {
@@ -156,7 +158,7 @@ namespace projectakhir
         private void button3_Click(object sender, EventArgs e)
         {
             koneksi.Open();
-            string queryString = "Update dbo.sewa set tanggal='" + dateTimePicker1.Text + "', ktp_p='" + textBox2.Text + "', plat_nomor='" + textBox3.Text + "' where id_sewa='" + textBox1.Text + "'";
+            string queryString = "Update dbo.sewa set tanggal='" + dateTimePicker1.Text + "', ktp_p='" + comboBox1.Text + "', plat_nomor='" + comboBox2.Text + "' where id_sewa='" + textBox1.Text + "'";
             SqlCommand cmd = new SqlCommand(queryString, koneksi);
             cmd.CommandType = CommandType.Text;
             cmd.ExecuteNonQuery();
@@ -164,6 +166,53 @@ namespace projectakhir
             MessageBox.Show("Update Data Berhasil");
             dataGridView();
             refreshform();
+        }
+
+        private void ComoBox1()
+        {
+            koneksi.Open();
+            string query = "SELECT ktp_p FROM penyewa";
+            SqlCommand cmd = new SqlCommand(query, koneksi);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ktp_p");
+
+            while (reader.Read())
+            {
+                DataRow row = dt.NewRow();
+                row["ktp_p"] = reader["ktp_p"].ToString();
+                dt.Rows.Add(row);
+            }
+
+            koneksi.Close();
+
+            comboBox1.DisplayMember = "ktp_p";
+            comboBox1.ValueMember = "ktp_p";
+            comboBox1.DataSource = dt;
+        }
+        private void ComoBox2()
+        {
+            koneksi.Open();
+            string query = "SELECT plat_nomor FROM Mobil";
+            SqlCommand cmd = new SqlCommand(query, koneksi);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("plat_nomor");
+
+            while (reader.Read())
+            {
+                DataRow row = dt.NewRow();
+                row["plat_nomor"] = reader["plat_nomor"].ToString();
+                dt.Rows.Add(row);
+            }
+
+            koneksi.Close();
+
+            comboBox2.DisplayMember = "plat_nomor";
+            comboBox2.ValueMember = "plat_nomor";
+            comboBox2.DataSource = dt;
         }
     }
 }

@@ -53,8 +53,8 @@ namespace projectakhir
             string platnomor = tbxplatnomor.Text;
             string jenis = comboBox1.Text;
             string warna = tbxwarna.Text;
-            string idAdmin = tbxidAdmin.Text;
-            string idGudang = tbxidGudang.Text;
+            string idAdmin = comboBox2.Text;
+            string idGudang = comboBox3.Text;
             koneksi.Open();
 
             string queryString = "INSERT INTO dbo.Mobil (plat_nomor, jenis, warna, id_admin, id_gudang) VALUES (@plat_nomor, @jenis, @warna, @id_admin, @id_gudang)";
@@ -95,6 +95,8 @@ namespace projectakhir
         {
             dataGridView();
             button3.Enabled=false;
+            Comobox2();
+            Comobox3();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -105,8 +107,8 @@ namespace projectakhir
                 tbxplatnomor.Text = row.Cells["plat_nomor"].Value.ToString();
                 comboBox1.Text = row.Cells["jenis"].Value.ToString();
                 tbxwarna.Text = row.Cells["warna"].Value.ToString();
-                tbxidAdmin.Text = row.Cells["id_admin"].Value.ToString();
-                tbxidGudang.Text = row.Cells["id_gudang"].Value.ToString();
+                comboBox2.Text = row.Cells["id_admin"].Value.ToString();
+                comboBox3.Text = row.Cells["id_gudang"].Value.ToString();
             }
             catch (Exception X)
             {
@@ -117,7 +119,7 @@ namespace projectakhir
         private void button4_Click(object sender, EventArgs e)
         {
             koneksi.Open();
-            string queryString = "Update dbo.Mobil set jenis='" + comboBox1.Text + "', warna='" + tbxwarna.Text + "', id_admin='" + tbxidAdmin.Text + "', id_gudang='" + tbxidGudang.Text + "' where plat_nomor='" + tbxplatnomor.Text + "'";
+            string queryString = "Update dbo.Mobil set jenis='" + comboBox1.Text + "', warna='" + tbxwarna.Text + "', id_admin='" + comboBox2.Text + "', id_gudang='" + comboBox3.Text + "' where plat_nomor='" + tbxplatnomor.Text + "'";
             SqlCommand cmd = new SqlCommand(queryString, koneksi);
             cmd.CommandType = CommandType.Text;
             cmd.ExecuteNonQuery();
@@ -131,8 +133,8 @@ namespace projectakhir
             tbxplatnomor.Text = "";
             comboBox1.Text = "";
             tbxwarna.Text = "";
-            tbxidAdmin.Text = "";
-            tbxidGudang.Text = "";
+            comboBox2.Text = "";
+            comboBox3.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -173,6 +175,54 @@ namespace projectakhir
             data_sewa ds = new data_sewa();
             ds.Show();
             this.Hide();
+        }
+
+        private void Comobox2()
+        {
+            koneksi.Open();
+            string query = "SELECT id_admin FROM Admin";
+            SqlCommand cmd = new SqlCommand(query, koneksi);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("id_admin");
+
+            while (reader.Read())
+            {
+                DataRow row = dt.NewRow();
+                row["id_admin"] = reader["id_admin"].ToString();
+                dt.Rows.Add(row);
+            }
+
+            koneksi.Close();
+
+            comboBox2.DisplayMember = "id_admin";
+            comboBox2.ValueMember = "id_admin";
+            comboBox2.DataSource = dt;
+        }
+
+        private void Comobox3() 
+        {
+            koneksi.Open();
+            string query = "SELECT id_gudang FROM Gudang";
+            SqlCommand cmd = new SqlCommand(query, koneksi);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("id_gudang");
+
+            while (reader.Read())
+            {
+                DataRow row = dt.NewRow();
+                row["id_gudang"] = reader["id_gudang"].ToString();
+                dt.Rows.Add(row);
+            }
+
+            koneksi.Close();
+
+            comboBox3.DisplayMember = "id_gudang";
+            comboBox3.ValueMember = "id_gudang";
+            comboBox3.DataSource = dt;
         }
     }
 }

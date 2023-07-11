@@ -37,6 +37,7 @@
             this.dataSupirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataAdminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.datasewaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,9 +59,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.datasewaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -118,37 +118,44 @@
             // dataMobilToolStripMenuItem
             // 
             this.dataMobilToolStripMenuItem.Name = "dataMobilToolStripMenuItem";
-            this.dataMobilToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataMobilToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.dataMobilToolStripMenuItem.Text = "data mobil";
             this.dataMobilToolStripMenuItem.Click += new System.EventHandler(this.dataMobilToolStripMenuItem_Click);
             // 
             // dataGudangToolStripMenuItem
             // 
             this.dataGudangToolStripMenuItem.Name = "dataGudangToolStripMenuItem";
-            this.dataGudangToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataGudangToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.dataGudangToolStripMenuItem.Text = "data gudang";
             this.dataGudangToolStripMenuItem.Click += new System.EventHandler(this.dataGudangToolStripMenuItem_Click);
             // 
             // dataSupirToolStripMenuItem
             // 
             this.dataSupirToolStripMenuItem.Name = "dataSupirToolStripMenuItem";
-            this.dataSupirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataSupirToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.dataSupirToolStripMenuItem.Text = "data supir";
             this.dataSupirToolStripMenuItem.Click += new System.EventHandler(this.dataSupirToolStripMenuItem_Click);
             // 
             // dataAdminToolStripMenuItem
             // 
             this.dataAdminToolStripMenuItem.Name = "dataAdminToolStripMenuItem";
-            this.dataAdminToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataAdminToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.dataAdminToolStripMenuItem.Text = "data admin";
             this.dataAdminToolStripMenuItem.Click += new System.EventHandler(this.dataAdminToolStripMenuItem_Click);
             // 
             // homeScreenToolStripMenuItem
             // 
             this.homeScreenToolStripMenuItem.Name = "homeScreenToolStripMenuItem";
-            this.homeScreenToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.homeScreenToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.homeScreenToolStripMenuItem.Text = "Home screen";
             this.homeScreenToolStripMenuItem.Click += new System.EventHandler(this.homeScreenToolStripMenuItem_Click);
+            // 
+            // datasewaToolStripMenuItem
+            // 
+            this.datasewaToolStripMenuItem.Name = "datasewaToolStripMenuItem";
+            this.datasewaToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.datasewaToolStripMenuItem.Text = "data_sewa";
+            this.datasewaToolStripMenuItem.Click += new System.EventHandler(this.datasewaToolStripMenuItem_Click);
             // 
             // button2
             // 
@@ -295,6 +302,10 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "SUV",
+            "Sedan",
+            "PickUp"});
             this.comboBox1.Location = new System.Drawing.Point(116, 255);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(258, 24);
@@ -323,8 +334,8 @@
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.comboBox2, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.textBox4, 1, 8);
-            this.tableLayoutPanel1.Controls.Add(this.textBox8, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.comboBox3, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.comboBox4, 1, 9);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(34, 43);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 10;
@@ -364,31 +375,29 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "L",
+            "P"});
             this.comboBox2.Location = new System.Drawing.Point(116, 111);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(258, 24);
             this.comboBox2.TabIndex = 21;
             // 
-            // textBox4
+            // comboBox3
             // 
-            this.textBox4.Location = new System.Drawing.Point(116, 291);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(258, 22);
-            this.textBox4.TabIndex = 25;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(116, 291);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(258, 24);
+            this.comboBox3.TabIndex = 25;
             // 
-            // textBox8
+            // comboBox4
             // 
-            this.textBox8.Location = new System.Drawing.Point(116, 326);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(258, 22);
-            this.textBox8.TabIndex = 26;
-            // 
-            // datasewaToolStripMenuItem
-            // 
-            this.datasewaToolStripMenuItem.Name = "datasewaToolStripMenuItem";
-            this.datasewaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.datasewaToolStripMenuItem.Text = "data_sewa";
-            this.datasewaToolStripMenuItem.Click += new System.EventHandler(this.datasewaToolStripMenuItem_Click);
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(116, 326);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(258, 24);
+            this.comboBox4.TabIndex = 26;
             // 
             // data_penyewa
             // 
@@ -447,8 +456,8 @@
         private System.Windows.Forms.ToolStripMenuItem homeScreenToolStripMenuItem;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.ToolStripMenuItem datasewaToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox4;
     }
 }

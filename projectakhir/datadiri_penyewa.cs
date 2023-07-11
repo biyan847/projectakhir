@@ -72,5 +72,63 @@ namespace projectakhir
             hu.Show();
             this.Hide();
         }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void ComboBox3()
+        {
+            koneksi.Open();
+            string query = "SELECT id_admin FROM Admin";
+            SqlCommand cmd = new SqlCommand(query, koneksi);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("id_admin");
+
+            while (reader.Read())
+            {
+                DataRow row = dt.NewRow();
+                row["id_admin"] = reader["id_admin"].ToString();
+                dt.Rows.Add(row);
+            }
+
+            koneksi.Close();
+
+            comboBox3.DisplayMember = "id_admin";
+            comboBox3.ValueMember = "id_admin";
+            comboBox3.DataSource = dt;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ComboBox3();
+            ComboBox4();
+        }
+
+        private void ComboBox4()
+        {
+            koneksi.Open();
+            string query = "SELECT plat_nomor FROM Mobil";
+            SqlCommand cmd = new SqlCommand(query, koneksi);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("plat_nomor");
+
+            while (reader.Read())
+            {
+                DataRow row = dt.NewRow();
+                row["plat_nomor"] = reader["plat_nomor"].ToString();
+                dt.Rows.Add(row);
+            }
+
+            koneksi.Close();
+
+            comboBox4.DisplayMember = "plat_nomor";
+            comboBox4.ValueMember = "plat_nomor";
+            comboBox4.DataSource = dt;
+        }
     }
 }
